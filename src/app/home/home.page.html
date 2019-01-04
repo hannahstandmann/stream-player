@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Media Player
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Video Link</ion-label>
+      <ion-input type="text" [(ngModel)]="videoLink"></ion-input>
+    </ion-item>
+    <ion-button color="primary" full (click)='startVideo()'>Start Video</ion-button>
+    <ion-item>
+      <ion-label floating>Stream Link</ion-label>
+      <ion-input type="text" [(ngModel)]="streamLink"></ion-input>
+    </ion-item>
+    <ion-button ion-item full color="secondary" (click)='setStream()'>Set Stream</ion-button>
+    <ion-button ion-item block color="primary" (click)='startStream()'>Start Stream</ion-button>
+    <ion-item>
+      <ion-label floating>Audio Link</ion-label>
+      <ion-input type="text" [(ngModel)]="audioLink"></ion-input>
+    </ion-item>
+    <ion-button ion-item color="primary" (click)='startAudio()'>Start Audio</ion-button>
+    <ion-button ion-item color="danger" (click)='stopAudio()' color='danger'>Stop Audio</ion-button>
+    <ion-item>
+      <div id="myMediaDiv"></div>
+    </ion-item>
+</ion-list>
+<ion-card>
+
+  <ion-card-header>
+    Player Message
+  </ion-card-header>
+
+  <ion-card-content>
+    {{errorMessage}}
+  </ion-card-content>
+
+</ion-card>
+</ion-content>
+  

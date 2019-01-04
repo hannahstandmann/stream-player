@@ -1,0 +1,7 @@
+{
+  "name": "stream-player",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
